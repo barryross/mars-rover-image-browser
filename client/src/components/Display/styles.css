@@ -1,0 +1,8 @@
+.display-container {
+	display:flex;
+	flex-wrap: wrap;
+}
+.display-container img{
+	max-width:300px;
+	height:200px;
+}
