@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios')
-const { NASA_API_HOS T} = require('../../constants');
+const { NASA_API_HOST} = require('../../constants');
 
 router.get('/:rover_name', async (req, res, next) => {
 	try {
