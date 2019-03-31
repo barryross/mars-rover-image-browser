@@ -9,7 +9,7 @@ export default class Header extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu>
+      <Menu inverted>
         <Menu.Item
           name='rovers'
           active={activeItem === 'rovers'}
