@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import roversReducer from './roversReducer'
+import rovers from './rovers'
 
 const rootReducer = combineReducers({
-  roversReducer  
+  rovers  
 });
 
 export default rootReducer;
