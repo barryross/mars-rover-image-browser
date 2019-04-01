@@ -1,8 +1,15 @@
 import { combineReducers } from 'redux';
-import rovers from './rovers'
+
+import curiosity from './curiosity'
+import opportunity from './opportunity'
+import spirit from './spirit'
+import ui from './ui'
 
 const rootReducer = combineReducers({
-  rovers  
+	Curiosity:curiosity,
+	Opportunity:opportunity,
+	Spirit:spirit,
+	ui,
 });
 
 export default rootReducer;
