@@ -4,12 +4,13 @@ This image browser allows you to view photos of Mars taken by NASA's Opportunity
 
 This is a Node.js/React web app that makes use of  [NASA Open APIs](https://api.nasa.gov/api.html#MarsPhotos).  
 
+## Technical Overview
+The meat and potatoes of this project is a React app, based off of Create React App (CRA).  In an effort to obscure the api key, a Node server is being used as a proxy for the api calls. 
 
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine, and you too, can view the Martian surface.  
-
 
 
 ## Prerequisites
@@ -93,4 +94,8 @@ Provide users with additional information about the rovers, such as history and/
 ## Authors
 
 * **Barry Ross** 
+
+## References
+
+- [Setting up React/Node Project](https://www.codementor.io/kakarganpat/how-to-setup-react-and-node-js-in-a-project-koxwqbssl) - Very helpful tutorial regarding using node as a proxy in conjuction with React
 
