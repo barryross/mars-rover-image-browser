@@ -21,13 +21,13 @@ You will need a valid NASA API key.  You can [obtain that here](https://api.nasa
 
 ## Installing
 
-Clone the repo and navigate into the folder
+Clone the repo and navigate into the folder:
 
 ```
 cd mars-rover-image-browser
 ```
 
-Install the dependencies for the project by running the following command from the project's root
+Install the dependencies for the project by running the following command from the project's root:
 
 ```
 npm install
@@ -57,7 +57,7 @@ At this point, you should be ready to run!
 
 ## Development
 
-From the project root, go ahead and start the app
+From the project root, go ahead and start the app:
 
 ```
 npm start
@@ -79,7 +79,7 @@ You should now have an updated `/build` folder in `/mars-rover-image-browser/cli
 
 ## Running a production build
 
-From the project root, go ahead and run the following command which creates a client build, starts the back-end server and runs the cliend build
+From the project root, go ahead and run the following command which creates a client build, starts the back-end server and runs the client build.
 
 ```
 npm run start-prod
