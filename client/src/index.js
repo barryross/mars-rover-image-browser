@@ -1,46 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { createStore, compose, applyMiddleware } from 'redux'
-import createSagaMiddleware from 'redux-saga'
-import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-react-router'
-import createHistory from 'history/createBrowserHistory'
-import rootSaga from './sagas'
-import curiosity from './reducers/curiosity'
-import opportunity from './reducers/opportunity'
-import spirit from './reducers/spirit'
-import ui from './reducers/ui'
-import 'semantic-ui-css/semantic.min.css'
 import { combineReducers } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux'
+import configureStore, { history } from './configureStore'
+
+import {ConnectedRouter } from 'connected-react-router'
+
+import 'semantic-ui-css/semantic.min.css'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const initialState = {}
-const sagaMiddleware = createSagaMiddleware()
-const history = createHistory()
-
-const store = createStore(
-  combineReducers({
-		Curiosity:curiosity,
-		Opportunity:opportunity,
-		Spirit:spirit,
-		ui,
-		router: connectRouter(history)
-	}),
-  initialState,
-  compose(
-    composeWithDevTools(
-    applyMiddleware(
-			sagaMiddleware,
-			routerMiddleware(history)
-		),
-  ))
-);
+// const history = createHistory()
+const store = configureStore()
 
 
-sagaMiddleware.run(rootSaga)
+
+
 
 
 ReactDOM.render(
