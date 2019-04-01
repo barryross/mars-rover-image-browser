@@ -1,5 +1,5 @@
 import moment from 'moment';
-import {GET_SPIRIT_IMAGES_SUCCESS, SET_DATE_SPIRIT} from '../actionsTypes';
+import {GET_SPIRIT_IMAGES_SUCCESS, SET_DATE_SPIRIT} from '../actionTypes';
 
 let now = moment().format("YYYY-MM-DD");
 

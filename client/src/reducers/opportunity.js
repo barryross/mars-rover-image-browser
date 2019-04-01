@@ -1,5 +1,5 @@
 import moment from 'moment'
-import {GET_OPPORTUNITY_IMAGES_SUCCESS, SET_DATE_OPPORTUNITY} from '../actionsTypes'
+import {GET_OPPORTUNITY_IMAGES_SUCCESS, SET_DATE_OPPORTUNITY} from '../actionTypes'
 
 let now = moment().format("YYYY-MM-DD")
 
