@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { Card, Icon, Image } from 'semantic-ui-react'
 
-export default ({image}) => {
+const Photo = ({image}) => {
 	return (
 		<Card>
 				<Image src={`${image.img_src}`} alt={`Image from Mars rover ${image.rover.name}`}/>
@@ -16,3 +17,9 @@ export default ({image}) => {
 		</Card>
 	)
 }
+
+Photo.propTypes = {
+	image: PropTypes.object
+};
+
+export default Photo
