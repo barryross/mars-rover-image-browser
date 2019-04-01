@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Photo from './Photo'
 import moment from 'moment'
 import './styles.scss'
 
-export default (props) => {
+const PhotoDisplay = (props) => {
 	const { images, name, status, launch, end } = props
 	let formattedLaunch = moment(launch).format("MM/DD/YYYY") //For consistant formatting with the datepicker
 	let formattedEnd = moment(end).format("MM/DD/YYYY") 
@@ -21,3 +22,14 @@ export default (props) => {
 		</div>
 	)
 }
+
+PhotoDisplay.propTypes = {
+	images: PropTypes.array.isRequired,
+	name: PropTypes.string.isRequired,
+	status: PropTypes.string.isRequired,
+	launch: PropTypes.string.isRequired,
+	end: PropTypes.string.isRequired
+};
+
+export default PhotoDisplay
+		 
