@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import PhotoDisplay from '../../components/PhotoDisplay'
-import DateSelector from '../../components/DateSelector'
 import { Button } from 'semantic-ui-react'
 import { Dimmer, Loader, Segment } from 'semantic-ui-react'
+import PhotoDisplay from '../../components/PhotoDisplay'
+import DateSelector from '../../components/DateSelector'
 import './style.scss'
 
 export default class extends Component{	

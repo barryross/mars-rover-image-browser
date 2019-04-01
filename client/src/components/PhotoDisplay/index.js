@@ -17,11 +17,13 @@ const PhotoDisplay = (props) => {
 				<Photo image={image} />
 			) 
 			: <Message negative>
-				<Message.Header>No images are available for the date that you have selected.</Message.Header>
-					<p> Images for <strong>{name}</strong> are available from the date it was launched, <strong>{formattedLaunch}</strong> until <strong>{status === "completed" ? formattedEnd : "yesterday."}</strong></p>
+				  <Message.Header>No images are available for the date that you have selected.</Message.Header>
+					<p> Images for <strong>{name}</strong> are available from the date it was launched, 
+					<strong>{formattedLaunch}</strong> until <strong>{status === "completed" ? formattedEnd : "yesterday."}</strong></p>
 					<p>Please ensure you've selected a date within this range.*</p>
-					<p> *NOTE: There are not images available for every day within a range.  </p><p>If you have selected a date within the range above, and are seeing no results, try for another date close to your selection.</p>
-			</Message>
+					<p> *NOTE: There are not images available for every day within a range.</p>
+					<p>If you have selected a date within the range above, and are seeing no results, try for another date close to your selection.</p>
+		  	</Message>
 			}
 		</div>
 	)

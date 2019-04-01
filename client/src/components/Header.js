@@ -9,7 +9,6 @@ export default class Header extends Component {
   render() {
 		const items = ["Curiosity", "Opportunity", "Spirit"]
     const { activeItem } = this.state
-		
     return (
       <Menu inverted>
 			{ items.map((item, i) =>  

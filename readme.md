@@ -109,12 +109,14 @@ npm run start-prod
 - Incorporate e2e tests in the browser to test overall user experience
 
 
-
 #### Performance & Scalability
-
+- Review current performance and number of times components are rendering unnecessarily, use `shouldComponentUpdate()` where helpful
 - Consider using a library such as [Immutable.js](https://github.com/immutable-js/immutable-js) to help insure immutability is maintained as the app grows
 - Consider using memoized selectors to reduce excess rendering of components ([reselect](https://github.com/reduxjs/reselect))
 
+#### Refactoring
+
+- Disable Redux DevTools for production build
 
 ##### Content
 
