@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import Photo from './Photo'
 import moment from 'moment'
+import { Message } from 'semantic-ui-react'
+
 import './styles.scss'
 
 const PhotoDisplay = (props) => {
@@ -14,10 +16,12 @@ const PhotoDisplay = (props) => {
 			images.map( image => 
 				<Photo image={image} />
 			) 
-			: <div className="unavailable">
-					<p>No images are available for the date that you have selected. </p><p> Images for {name} are available from the date it was launched, {formattedLaunch} until {status === "completed" ? formattedEnd : "yesterday."}</p>
-					<p>Please ensure you've selected a date within this range</p>
-				</div> 
+			: <Message negative>
+				<Message.Header>No images are available for the date that you have selected.</Message.Header>
+					<p> Images for <strong>{name}</strong> are available from the date it was launched, <strong>{formattedLaunch}</strong> until <strong>{status === "completed" ? formattedEnd : "yesterday."}</strong></p>
+					<p>Please ensure you've selected a date within this range.*</p>
+					<p> *NOTE: There are not images available for every day within a range.  </p><p>If you have selected a date within the range above, and are seeing no results, try for another date close to your selection.</p>
+			</Message>
 			}
 		</div>
 	)
