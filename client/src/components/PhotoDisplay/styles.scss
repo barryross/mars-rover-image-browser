@@ -1,0 +1,10 @@
+.display-container {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	img{
+		max-width:300px;
+		height:200px;
+	}
+}
