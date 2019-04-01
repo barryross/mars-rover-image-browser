@@ -8,7 +8,7 @@ import './styles.scss'
 
 const PhotoDisplay = (props) => {
 	const { images, name, status, launch, end } = props
-	let formattedLaunch = moment(launch).format("MM/DD/YYYY") //For consistant formatting with the datepicker
+	let formattedLaunch = moment(launch).format("MM/DD/YYYY") //For consistent formatting with the date-picker
 	let formattedEnd = moment(end).format("MM/DD/YYYY") 
 	return (
 		<div className="display-container">

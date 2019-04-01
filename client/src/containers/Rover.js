@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router'
 import Rover from '../components/Rover'
-import { getRoverImages, setSelectedDate} from '../actions/rovers'
+import { getRoverImages, setSelectedDate} from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
     return {	
