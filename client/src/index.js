@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { combineReducers } from 'redux';
-import { createStore, compose, applyMiddleware } from 'redux'
 import configureStore, { history } from './configureStore'
 
 import {ConnectedRouter } from 'connected-react-router'
@@ -14,10 +12,6 @@ import * as serviceWorker from './serviceWorker';
 
 // const history = createHistory()
 const store = configureStore()
-
-
-
-
 
 
 ReactDOM.render(
