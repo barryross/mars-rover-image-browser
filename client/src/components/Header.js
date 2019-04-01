@@ -12,8 +12,9 @@ export default class Header extends Component {
 		
     return (
       <Menu inverted>
-			{ items.map(item =>  
+			{ items.map((item, i) =>  
 				<Menu.Item
+						key={i}
 						as={Link}
 						to={item}
 						name={item}
