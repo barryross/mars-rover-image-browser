@@ -2,41 +2,52 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { BrowserRouter } from 'react-router-dom';
 import { createStore, compose, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-react-router'
+import createHistory from 'history/createBrowserHistory'
 import rootSaga from './sagas'
-
+import curiosity from './reducers/curiosity'
+import opportunity from './reducers/opportunity'
+import spirit from './reducers/spirit'
+import ui from './reducers/ui'
 import 'semantic-ui-css/semantic.min.css'
-
-import reducer from './reducers';
-
+import { combineReducers } from 'redux';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const initialState = {}
 const sagaMiddleware = createSagaMiddleware()
+const history = createHistory()
 
 const store = createStore(
-  reducer,
+  combineReducers({
+		Curiosity:curiosity,
+		Opportunity:opportunity,
+		Spirit:spirit,
+		ui,
+		router: connectRouter(history)
+	}),
   initialState,
   compose(
     composeWithDevTools(
     applyMiddleware(
-      sagaMiddleware,
+			sagaMiddleware,
+			routerMiddleware(history)
 		),
   ))
 );
+
 
 sagaMiddleware.run(rootSaga)
 
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <ConnectedRouter history={history}>
         <App />
-    </BrowserRouter>
+    </ConnectedRouter>
   </Provider>,
     document.getElementById('root'));
 
