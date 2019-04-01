@@ -55,12 +55,35 @@ At this point, you should be ready to run!
 
 
 
-## Running
+## Development
 
 From the project root, go ahead and start the app
 
 ```
 npm start
+```
+
+
+
+## Build
+
+From the project root, go ahead and run 
+
+```
+npm run build-client
+```
+
+You should now have an updated `/build` folder in `/mars-rover-image-browser/client/`
+
+
+
+## Running a production build
+
+From the project root, go ahead and run the following command which creates a client build, starts the back-end server and runs the cliend build
+
+```
+npm run start-prod
+
 ```
 
 
@@ -75,9 +98,9 @@ npm start
 
 * [Redux Saga](https://github.com/redux-saga/redux-saga)
 
-  
 
-## Potential Future Development
+
+## Future Development Considerations
 
 ##### Testing
 
@@ -87,7 +110,13 @@ npm start
 
 
 
-##### Information
+#### Performance & Scalability
+
+- Consider using a library such as [Immutable.js](https://github.com/immutable-js/immutable-js) to help insure immutability is maintained as the app grows
+- Consider using memoized selectors to reduce excess rendering of components ([reselect](https://github.com/reduxjs/reselect))
+
+
+##### Content
 
 Provide users with additional information about the rovers, such as history and/or specifications about the crafts.  
 
