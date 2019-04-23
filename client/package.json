@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "connected-react-router": "^6.3.2",
+    "enzyme": "^3.9.0",
     "history": "^4.9.0",
     "immutable": "^4.0.0-rc.12",
     "moment": "^2.24.0",
@@ -37,5 +38,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme-adapter-react-16": "^1.12.1"
+  }
 }
