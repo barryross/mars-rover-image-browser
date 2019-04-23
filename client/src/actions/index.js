@@ -1,5 +1,5 @@
 
-import { GET_ROVER_IMAGES } from '../actionTypes'
+import { GET_ROVER_IMAGES, LOADING } from '../actionTypes'
 
 export const getRoverImages = (rover_name, date) =>{
 	return {
@@ -13,5 +13,12 @@ export const setSelectedDate = (rover_name, date) => {
 	return {
 		type: `SET_DATE_${rover_name}`.toUpperCase(),
 		date
+ }
+}
+
+export const setLoading = (data) => {
+	return {
+		type: LOADING,
+		data
  }
 }
