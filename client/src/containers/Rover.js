@@ -7,9 +7,9 @@ import { getRoverImages, setSelectedDate} from '../actions'
 //(e.g. When it is being used for Opportunity, we only want to pass Opportunity images to the Rover component)
 const mapStateToProps = (state, ownProps) => {
     return {	
-				images:state[ownProps.name].images,  
-				currentlySelectedDate:state[ownProps.name].date,
-				loading:state.ui.loading
+				 images:state.getIn([ownProps.name, 'images']),
+					currentlySelectedDate:state.getIn([`${[ownProps.name]}`, 'date']),
+					loading:state.getIn(['ui', 'loading'])
     }
 }
 

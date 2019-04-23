@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore, { history } from './configureStore'
+import Immutable from 'immutable'
 
-import {ConnectedRouter } from 'connected-react-router'
+import {ConnectedRouter } from 'connected-react-router/immutable'
 
 import 'semantic-ui-css/semantic.min.css'
 import './index.css';
@@ -11,7 +12,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // const history = createHistory()
-const store = configureStore()
+const store = configureStore(Immutable.Map())
 
 
 ReactDOM.render(

@@ -1,5 +1,6 @@
-import { combineReducers } from 'redux';
-import { connectRouter } from 'connected-react-router'
+import { combineReducers } from 'redux-immutable';
+
+import { connectRouter } from 'connected-react-router/immutable'
 
 import curiosity from './curiosity'
 import opportunity from './opportunity'
@@ -12,7 +13,6 @@ const rootReducer = (history) => combineReducers({
 	Spirit:spirit,
 	ui,
 	router: connectRouter(history)
-
 });
 
 export default rootReducer;

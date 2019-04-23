@@ -12,6 +12,8 @@ export default class extends Component{
 	}
 	componentDidMount = () =>{
 		const {getRoverImages, name, currentlySelectedDate} = this.props
+		console.log("loading", this.props)
+		console.log("currentlyselected date", currentlySelectedDate)
 		getRoverImages(name, currentlySelectedDate)
 	}
 	render(){
