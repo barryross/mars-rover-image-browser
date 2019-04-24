@@ -12,9 +12,8 @@ const initialState = fromJS({
 export default (state = initialState, action) => {
   switch (action.type) {
 		case GET_OPPORTUNITY_IMAGES_SUCCESS:
-		let images = action.response.data.response.photos ? action.response.data.response.photos : []
 		return state
-			.set('images', images)
+			.set('images', action.data)
 						
 		case SET_DATE_OPPORTUNITY:
 		return state
